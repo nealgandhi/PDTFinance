@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import React from "react";
 
 function Form() {
@@ -65,6 +65,7 @@ function Form() {
             <h1>Request Form</h1>
           </div>
           <div>
+            <h3>Name</h3>
             <input
               type="text"
               name="name"
@@ -74,6 +75,7 @@ function Form() {
             />
           </div>
           <div>
+            <h3>Bond Number</h3>
             <input
               type="text"
               name="bondNumber"
@@ -83,8 +85,9 @@ function Form() {
             />
           </div>
           <div>
+            <h3>How much money do you need?</h3>
             <input
-              type="text"
+              type="number"
               name="moneyRequested"
               placeholder="How much money do you need"
               value={requestInfo.moneyRequested}
@@ -92,6 +95,7 @@ function Form() {
             />
           </div>
           <div>
+            <h3>What committee is this related to?</h3>
             <input
               type="text"
               name="committee"
@@ -101,6 +105,7 @@ function Form() {
             />
           </div>
           <div>
+            <h3>Why?</h3>
             <input
               type="text"
               name="reason"
@@ -110,6 +115,7 @@ function Form() {
             />
           </div>
           <div>
+            {/* add padding here to make the button not look dumb */}
             <button>Submit Request</button>
           </div>
         </form>
