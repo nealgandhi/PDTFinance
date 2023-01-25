@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
+=======
+import { useState } from "react";
+>>>>>>> b8182df805ab2ed12a004522a73c81abf2941601
 import React from "react";
 
 function Form() {
@@ -13,6 +17,7 @@ function Form() {
   const handleChange = (event) => {
     setRequestInfo({ ...requestInfo, [event.target.name]: event.target.value });
   };
+<<<<<<< HEAD
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -58,6 +63,52 @@ function Form() {
     }
   };
 
+=======
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(requestInfo);
+    setRequestInfo({
+      name: "",
+      bondNumber: "",
+      moneyRequested: "",
+      committee: "",
+      reason: "",
+    });
+    if (requestInfo.name !== "") {
+      const content = {
+        content: "PDT Money Request",
+        embeds: [
+          {
+            title:
+              requestInfo.bondNumber +
+              " " +
+              requestInfo.name +
+              " money request",
+            description:
+              "Needs " +
+              requestInfo.moneyRequested +
+              " because: " +
+              requestInfo.reason,
+            footer: {
+              text: "For " + requestInfo.committee,
+            },
+          },
+        ],
+      };
+      fetch(
+        "https://discord.com/api/webhooks/1067161772290748496/pe6qG41MBlft6UJKViyzkE7dpRDtU4QhhXasaEz6XlAY8A_rLBk0rNm6zCpHONaueu4e",
+        {
+          method: "POST",
+          body: JSON.stringify(content),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+    }
+  };
+
+>>>>>>> b8182df805ab2ed12a004522a73c81abf2941601
   return (
     <div>
       <div className="form-container">
@@ -66,6 +117,10 @@ function Form() {
             <h1>Request Form</h1>
           </div>
           <div>
+<<<<<<< HEAD
+=======
+            <h3>Name</h3>
+>>>>>>> b8182df805ab2ed12a004522a73c81abf2941601
             <input
               type="text"
               name="name"
@@ -75,6 +130,10 @@ function Form() {
             />
           </div>
           <div>
+<<<<<<< HEAD
+=======
+            <h3>Bond Number</h3>
+>>>>>>> b8182df805ab2ed12a004522a73c81abf2941601
             <input
               type="text"
               name="bondNumber"
@@ -84,8 +143,14 @@ function Form() {
             />
           </div>
           <div>
+<<<<<<< HEAD
             <input
               type="text"
+=======
+            <h3>How much money do you need?</h3>
+            <input
+              type="number"
+>>>>>>> b8182df805ab2ed12a004522a73c81abf2941601
               name="moneyRequested"
               placeholder="How much money do you need"
               value={requestInfo.moneyRequested}
@@ -93,6 +158,10 @@ function Form() {
             />
           </div>
           <div>
+<<<<<<< HEAD
+=======
+            <h3>What committee is this related to?</h3>
+>>>>>>> b8182df805ab2ed12a004522a73c81abf2941601
             <input
               type="text"
               name="committee"
@@ -102,6 +171,10 @@ function Form() {
             />
           </div>
           <div>
+<<<<<<< HEAD
+=======
+            <h3>Why?</h3>
+>>>>>>> b8182df805ab2ed12a004522a73c81abf2941601
             <input
               type="text"
               name="reason"
@@ -111,6 +184,10 @@ function Form() {
             />
           </div>
           <div>
+<<<<<<< HEAD
+=======
+            {/* add padding here to make the button not look dumb */}
+>>>>>>> b8182df805ab2ed12a004522a73c81abf2941601
             <button>Submit Request</button>
           </div>
         </form>
