@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-import { useState, useEffect } from "react";
-=======
 import { useState } from "react";
->>>>>>> b8182df805ab2ed12a004522a73c81abf2941601
 import React from "react";
 
 function Form() {
+  const WEBHOOK_KEY = process.env.REACT_APP_DISCORD_WEBHOOK_KEY;
   const [requestInfo, setRequestInfo] = useState({
     name: "",
     bondNumber: "",
@@ -17,8 +14,6 @@ function Form() {
   const handleChange = (event) => {
     setRequestInfo({ ...requestInfo, [event.target.name]: event.target.value });
   };
-<<<<<<< HEAD
-
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(requestInfo);
@@ -51,7 +46,7 @@ function Form() {
         ],
       };
       fetch(
-        "https://discord.com/api/webhooks/1067161772290748496/pe6qG41MBlft6UJKViyzkE7dpRDtU4QhhXasaEz6XlAY8A_rLBk0rNm6zCpHONaueu4e",
+        `https://discord.com/api/webhooks/1067891163916402748/${WEBHOOK_KEY}`,
         {
           method: "POST",
           body: JSON.stringify(content),
@@ -63,132 +58,90 @@ function Form() {
     }
   };
 
-=======
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(requestInfo);
-    setRequestInfo({
-      name: "",
-      bondNumber: "",
-      moneyRequested: "",
-      committee: "",
-      reason: "",
-    });
-    if (requestInfo.name !== "") {
-      const content = {
-        content: "PDT Money Request",
-        embeds: [
-          {
-            title:
-              requestInfo.bondNumber +
-              " " +
-              requestInfo.name +
-              " money request",
-            description:
-              "Needs " +
-              requestInfo.moneyRequested +
-              " because: " +
-              requestInfo.reason,
-            footer: {
-              text: "For " + requestInfo.committee,
-            },
-          },
-        ],
-      };
-      fetch(
-        "https://discord.com/api/webhooks/1067161772290748496/pe6qG41MBlft6UJKViyzkE7dpRDtU4QhhXasaEz6XlAY8A_rLBk0rNm6zCpHONaueu4e",
-        {
-          method: "POST",
-          body: JSON.stringify(content),
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
-    }
-  };
-
->>>>>>> b8182df805ab2ed12a004522a73c81abf2941601
   return (
-    <div>
+    <div className="grid h-screen place-content-center">
       <div className="form-container">
         <form onSubmit={handleSubmit}>
           <div>
-            <h1>Request Form</h1>
+            <h1 className="grid place-content-center text-bold text-xl subpixel-antialiased">
+              Request Form
+            </h1>
           </div>
           <div>
-<<<<<<< HEAD
-=======
             <h3>Name</h3>
->>>>>>> b8182df805ab2ed12a004522a73c81abf2941601
             <input
               type="text"
               name="name"
-              placeholder="Your name here"
               value={requestInfo.name}
               onChange={handleChange}
             />
           </div>
           <div>
-<<<<<<< HEAD
-=======
             <h3>Bond Number</h3>
->>>>>>> b8182df805ab2ed12a004522a73c81abf2941601
             <input
-              type="text"
+              type="number"
               name="bondNumber"
-              placeholder="Your bond number"
               value={requestInfo.bondNumber}
               onChange={handleChange}
             />
           </div>
           <div>
-<<<<<<< HEAD
-            <input
-              type="text"
-=======
             <h3>How much money do you need?</h3>
             <input
               type="number"
->>>>>>> b8182df805ab2ed12a004522a73c81abf2941601
               name="moneyRequested"
-              placeholder="How much money do you need"
               value={requestInfo.moneyRequested}
               onChange={handleChange}
             />
           </div>
           <div>
-<<<<<<< HEAD
-=======
             <h3>What committee is this related to?</h3>
->>>>>>> b8182df805ab2ed12a004522a73c81abf2941601
-            <input
+            <select
               type="text"
               name="committee"
-              placeholder="What Committee"
               value={requestInfo.committee}
               onChange={handleChange}
-            />
+            >
+              <option>Awards</option>
+              <option>Brotherhood</option>
+              <option>Chaplain</option>
+              <option>Exec</option>
+              <option>Fundraising</option>
+              <option>Historian</option>
+              <option>Housing</option>
+              <option>Media</option>
+              <option>Pallas</option>
+              <option>Phikeia</option>
+              <option>Philanthropy</option>
+              <option>Pres</option>
+              <option>Quartermaster</option>
+              <option>Recruitment</option>
+              <option>Relations</option>
+              <option>Risk Management</option>
+              <option>Scholarship</option>
+              <option>Service</option>
+              <option>Social</option>
+              <option>Unallocated</option>
+              <option>Vice Pres</option>
+              <option>Warden</option>
+            </select>
           </div>
           <div>
-<<<<<<< HEAD
-=======
             <h3>Why?</h3>
->>>>>>> b8182df805ab2ed12a004522a73c81abf2941601
-            <input
-              type="text"
+            <textarea
+              type="textarea"
+              rows="10"
+              cols="30"
               name="reason"
-              placeholder="Reason"
               value={requestInfo.reason}
               onChange={handleChange}
             />
           </div>
           <div>
-<<<<<<< HEAD
-=======
             {/* add padding here to make the button not look dumb */}
->>>>>>> b8182df805ab2ed12a004522a73c81abf2941601
-            <button>Submit Request</button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+              Submit Request
+            </button>
           </div>
         </form>
       </div>
