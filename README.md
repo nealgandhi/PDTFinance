@@ -2,4 +2,10 @@
 
 This project was created for the TX Upsilon Chapter of Phi Delta Theta to help track finances more efficiently
 
-### Created by Neal Gandhi, Ryan Radloff, Austin Leonhardt, Reese Hoffart, Owen Stevens, and Kaden Van Price
+##Functionality
+
+- Sending in Reimbursement Requests
+- Tracking Reimbursement Requests on admin panel
+- Tracking overall spending being filtered by specific markers in data
+
+### Created by Neal Gandhi
