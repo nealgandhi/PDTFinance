@@ -2,7 +2,7 @@
 
 This project was created for the TX Upsilon Chapter of Phi Delta Theta to help track finances more efficiently
 
-##Functionality
+## Functionality
 
 - Sending in Reimbursement Requests
 - Tracking Reimbursement Requests on admin panel
