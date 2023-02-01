@@ -1,6 +1,6 @@
 import "./input.css";
 import Form from "./components/Form";
-import Data from "./components/Data";
+import Data from "./components/Data/Data.js";
 import Requests from "./components/Requests";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";

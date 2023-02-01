@@ -1,0 +1,92 @@
+[
+  {
+    "name": "August",
+    "spent": "327",
+    "committeSpending": [
+      {
+        "committee": "brotherhood",
+        "amount": "100"
+      },
+      {
+        "committee": "exec",
+        "amount": "127"
+      },
+      {
+        "committee": "quartermaster",
+        "amount": "100"
+      }
+    ]
+  },
+  {
+    "name": "September",
+    "spent": "762",
+    "committeSpending": [
+      {
+        "committee": "brotherhood",
+        "amount": "100"
+      },
+      {
+        "committee": "exec",
+        "amount": "127"
+      },
+      {
+        "committee": "quartermaster",
+        "amount": "100"
+      }
+    ]
+  },
+  {
+    "name": "October",
+    "spent": "654",
+    "committeSpending": [
+      {
+        "committee": "brotherhood",
+        "amount": "100"
+      },
+      {
+        "committee": "exec",
+        "amount": "127"
+      },
+      {
+        "committee": "quartermaster",
+        "amount": "100"
+      }
+    ]
+  },
+  {
+    "name": "November",
+    "spent": "908",
+    "committeSpending": [
+      {
+        "committee": "brotherhood",
+        "amount": "100"
+      },
+      {
+        "committee": "exec",
+        "amount": "127"
+      },
+      {
+        "committee": "quartermaster",
+        "amount": "100"
+      }
+    ]
+  },
+  {
+    "name": "December",
+    "spent": "424",
+    "committeSpending": [
+      {
+        "committee": "brotherhood",
+        "amount": "100"
+      },
+      {
+        "committee": "exec",
+        "amount": "127"
+      },
+      {
+        "committee": "quartermaster",
+        "amount": "100"
+      }
+    ]
+  }
+]
